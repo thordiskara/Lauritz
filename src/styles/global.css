@@ -1,0 +1,63 @@
+:root {
+    /* Colors */
+    --color-red-900: #690101;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-gray-100: #EFEFEF;
+    --color-gray-200: #DCDCDC;
+    --color-gray-300: #BDBDBD;
+    --color-gray-400: #989898;
+    --color-red-100: #FFDADA;
+    --color-red-800: #BC0000;
+    
+    /* Letter spacing */
+    --letter-spacing-overline: 0.09375em;
+    --letter-spacing-button: 0.07813em;
+    --letter-spacing-h4: 0.01563em;
+    --letter-spacing-h6: 0.00938em;
+    --letter-spacing-body-text: 0.03125em;
+    --letter-spacing-small-body-text: 0.01563em;
+
+    /* Border radius button */
+    --radius-button: 50%;
+
+    /* Font family */
+    --font-family-heading-sans-serif: proxima-nova, sans-serif;
+    --font-family-body: proxima-nova, sans-serif;
+    --font-family-headings-serif: ivypresto-display, serif;
+
+    /* Font scale heading */
+    --font-size-h6: 1.25rem;
+    --font-size-h5: 1.563rem;
+    --font-size-h4: 2rem;
+    --font-size-h3: 2.5rem;
+    --font-size-h2: 3.063rem;
+    --font-size-display-heading: 3.875rem;
+
+    /* Font scale body text */
+    --font-size-body: 1rem;
+    --font-size-small-body: 0.875rem;
+    --font-size-overline: 0.625rem;
+    --font-size-button: 1rem;
+
+    /* Line height */
+    --line-height-h6: 1.875rem;
+    --line-height-small-body: 1.063rem;
+    --line-height-body: 1.188rem;
+
+    /* Aliases */
+
+    }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.light{
+    background-color: white;
+}
+.dark{
+    background-color: rgb(239, 239, 239);
+}
