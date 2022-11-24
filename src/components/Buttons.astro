@@ -1,0 +1,58 @@
+---
+const icon = true;
+import Eye from '../SVG/eye.svg';
+---
+<div class="all-buttons">
+    <a title="bigViewItem" class="buttonText" href="">View Item </a>
+
+    <button title="bigWatchItem" class="buttonText">Watch Item {icon && <img src={Eye} alt="watch"/>}</button>
+
+    <a title="smallViewItem" class="small-button overline" href="">View Item</a>
+    
+    <button title="smallWatchItem" class="small-button overline">Watch Item {icon && <img src={Eye} alt="watch"/>}</button>
+</div>
+
+<style>
+    a{
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        padding: 7px 30px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    a:hover{
+        background-color: var(--hover-tag-dark-red);
+    }
+    button{
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        padding: 7px 30px;
+        border-radius: 20px;
+        border: solid black 1px;
+        cursor: pointer;
+        display: flex;
+        gap: 0.3rem;
+        align-items: center;
+    }
+    button:hover{
+        color:var(--hover-tag-dark-red);
+        border-color: var(--hover-tag-dark-red);
+    }
+
+    .small-button{
+        padding: 5px 19px;
+        display: flex;
+        align-items: center;
+    }
+
+    img{
+        width: 20px;
+    }
+
+    .all-buttons{
+        display: flex;
+        gap: 5rem;
+    }
+</style>

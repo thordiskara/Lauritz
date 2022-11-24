@@ -1,5 +1,7 @@
 ---
 import Info from '../SVG/info.svg'
+import PrimaryBtnBig from "../components/PrimaryBtnBig.astro"
+import SecondaryBtnBig from "../components/SecondaryBtnBig.astro"
 ---
 
 
@@ -19,9 +21,12 @@ import Info from '../SVG/info.svg'
     </div>
     <div>
     <img src={Info} alt="info icon">
-    <button class="small-button">Watch Item </button>
     
-    <button class="small-button">Watch Item </button>
+    <div class="buttons">
+        <PrimaryBtnBig/> 
+        <SecondaryBtnBig/>
+    </div>
+
 </div>
 <div>
     
@@ -64,6 +69,7 @@ import Info from '../SVG/info.svg'
         width:423px;
         border: solid black 1px;
         padding: 28px 32px 28px 32px;
+        background-color: var(--color-white);
     
     }
     .auction-end {
@@ -88,6 +94,15 @@ import Info from '../SVG/info.svg'
     .underline:hover {
         color: var( --hover-tag-dark-red);
         cursor: pointer;
+    }
+
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    img{
+        width: 20px;
     }
 
 </style>

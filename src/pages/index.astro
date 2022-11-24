@@ -43,7 +43,7 @@ import Singlecard  from "../components/Singlecard.astro"
         </div>
     </section>
 
-    <section class="light buttonsLayout">
+    <section >
         <div class="buttonsLayout">
             <PrimaryBtnBig/>
         </div>
@@ -62,14 +62,20 @@ import Singlecard  from "../components/Singlecard.astro"
         <Carousel></Carousel>
     </section>
     
-    <section>
+    <section class="light">
         <h5>card</h5>
         <Gridcard />
     </section>
-<section>
-    
+<section class="dark">
     <Singlecard/>
 </section>
 
     <Footer />
 </Layout>
+
+<style>
+    .buttonsLayout{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+</style>
