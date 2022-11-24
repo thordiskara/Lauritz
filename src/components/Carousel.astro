@@ -1,9 +1,18 @@
 ---
-import Placeholder from '../img/placeholder.webp';
+import Placeholder from '../img/placeholder.webp'
+
+import TagDeluxe from "../components/TagDeluxe.astro"
+import TagNew from "../components/TagNew.astro"
 ---
 
 <article>
-    <div class="carousel-img-container"><img src={Placeholder} alt="image"/></div>
+    <div class="carousel-img-container">
+        <img src={Placeholder} alt="image"/>
+        <div class="tags">
+            <TagNew/>
+            <TagDeluxe/>
+        </div>
+    </div>
     <div class="carousel-layout">
         <p class="overline timeLeft">Ends 13/1 at 13:45</p>
         <p class="smallBody">Current bid - (9 bids)</p>
@@ -23,6 +32,7 @@ import Placeholder from '../img/placeholder.webp';
     .carousel-img-container{
         max-width: 22rem;
         padding-bottom: 0.5rem;
+        position: relative;
     }
     .carousel-img-container img{
         width: 100%;
@@ -42,6 +52,12 @@ import Placeholder from '../img/placeholder.webp';
 
     .secondLine{
         align-items: center;
+    }
+
+    .tags{
+        position: absolute;
+        top: 13rem;
+        left: 17rem;
     }
 
 </style>
