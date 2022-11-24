@@ -2,17 +2,19 @@
 import Info from '../SVG/info.svg'
 import PrimaryBtnBig from "../components/PrimaryBtnBig.astro"
 import SecondaryBtnBig from "../components/SecondaryBtnBig.astro"
+
+const content = " <button> hej </button>";
 ---
 
 
 <section class="single-view-card">
 
     <h5 class="auction-end">Auction ends</h5>
-    <div>
+    <div class="p-left">
        <div class="bodyText current-bid"> <p>Current bid - </p> <p>(no. Bids)</p></div> 
         <h5>DKK</h5>
     </div>
-    <div class="smallBody">
+    <div class=" p-left smallBody estimate">
         <p>estimate</p>
         <p> DKK</p>
     </div>
@@ -20,43 +22,45 @@ import SecondaryBtnBig from "../components/SecondaryBtnBig.astro"
         <p class="bodyText">DKK or up</p>
     </div>
     <div>
+        <div class="info">
     <img src={Info} alt="info icon">
+</div>
     
     <div class="buttons">
-        <PrimaryBtnBig/> 
+        <PrimaryBtnBig set:innerHTML={content} /> 
         <SecondaryBtnBig/>
     </div>
 
 </div>
-<div>
+<div class="buy-now">
     
 
 
     <h5>DKK</h5>
-    <button class="small-button">BUY NOW</button>
+    <PrimaryBtnBig/> 
 
 
 </div>
-<div>
+<div class="shipping">
     <h5>shipping prices</h5>
-    <p class="bodyText">
+    <p class="bodyText shipping-info">
         To get a price on delivery to your home address or to a warehouse, please contact a transport company <span class="underline">here.</span> 
 
 
     </p>
-    <p class="underline smallBody">
+    <p class="underline smallBody p-left">
         Change delivery address
     </p>
 </div>
 <div>
-    <h5>previous bids</h5>
-    <div class="bodyText">
+    <h5 class="prev-h">previous bids</h5>
+    <div class="bodyText prev-bid">
         <p>name</p> <p>date</p> <p>DKK</p>
     </div>
-    <div class="bodyText">
+    <div class="bodyText prev-bid">
         <p>name</p> <p>date</p> <p>DKK</p>
     </div>
-    <p class="underline smallBody">Show more</p>
+    <p class="underline smallBody show">Show more</p>
 
 
 </div>
@@ -68,24 +72,32 @@ import SecondaryBtnBig from "../components/SecondaryBtnBig.astro"
         margin: 10px;
         width:423px;
         border: solid black 1px;
-        padding: 28px 32px 28px 32px;
+        padding: 1.5rem 2rem 1.5rem 2rem;
         background-color: var(--color-white);
     
     }
     .auction-end {
         color: var(--auction-end-text);
     }
-   
+   .estimate {
+    padding-top: 2rem;
+   }
+   .estimate p {
+    padding-bottom: 0.4rem;
+   }
     .small-button{
         padding: 5px 19px;
         
     }
     .current-bid {
+        padding-top: 1rem;
         display: flex;
     }
     .place-holder {
+        padding-top: 3rem;
         color: var(--placeholder-text);
         border-bottom: solid black 1px;
+        
     }
     .underline {
        text-decoration: underline;
@@ -99,10 +111,53 @@ import SecondaryBtnBig from "../components/SecondaryBtnBig.astro"
     .buttons{
         display: flex;
         justify-content: space-between;
+        padding-bottom: 2rem;
+        
     }
 
     img{
         width: 20px;
+        padding-bottom: 0.4rem;
+    }
+    .info {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 2rem;
+    }
+    .buy-now {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+        border-bottom: solid  1px;
+        border-top: solid 1px;
+        border-color: var( --divider-line-color);
+
+    }
+    .prev-bid {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.6rem 0.5rem 0rem 0.5rem;
+    }
+    .shipping {
+        border-bottom: solid 1px;
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        border-color: var( --divider-line-color);
+
+    }
+    .shipping-info {
+        padding: 0.3rem 0 1rem 0.5rem;
+    }
+    .show {
+        padding-top: 1.3rem;
+        text-align: center;
+    }
+    .prev-h {
+        padding-top: 1.5rem;
+    }
+    .p-left {
+        padding-left: 0.5rem;
     }
 
 </style>
