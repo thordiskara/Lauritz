@@ -2,14 +2,14 @@
 const icon = true;
 import Eye from '../SVG/eye.svg';
 ---
-<div class="all-buttons buttonText">
-    <a href="">View Item </a>
+<div class="all-buttons">
+    <a class="buttonText" href="">View Item </a>
 
-    <button>Watch Item {icon && <img src={Eye} alt="watch"/>}</button>
+    <button class="buttonText">Watch Item {icon && <img src={Eye} alt="watch"/>}</button>
 
-    <a class="small-button" href="">View Item</a>
+    <a class="small-button overline" href="">View Item</a>
     
-    <button class="small-button">Watch Item {icon && <img src={Eye} alt="watch"/>}</button>
+    <button class="small-button overline">Watch Item {icon && <img src={Eye} alt="watch"/>}</button>
 </div>
 
 <style>
@@ -34,6 +34,7 @@ import Eye from '../SVG/eye.svg';
         cursor: pointer;
         display: flex;
         gap: 0.3rem;
+        align-items: center;
     }
     button:hover{
         color:var(--hover-tag-dark-red);
