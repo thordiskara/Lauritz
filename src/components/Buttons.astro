@@ -1,10 +1,15 @@
 ---
 const icon = true;
+import Eye from '../SVG/eye.svg';
 ---
-<div>
+<div class="all-buttons">
     <a href="">View Item </a>
+
+    <button>Watch Item {icon && <img src={Eye} alt="watch"/>}</button>
+
+    <a class="small-button" href="">View Item</a>
     
-    <button>Watch Item</button>
+    <button class="small-button">Watch Item {icon && <img src={Eye} alt="watch"/>}</button>
 </div>
 
 <style>
@@ -27,9 +32,26 @@ const icon = true;
         border-radius: 20px;
         border: solid black 1px;
         cursor: pointer;
+        display: flex;
+        gap: 0.3rem;
     }
     button:hover{
         color:var(--hover-tag-dark-red);
         border-color: var(--hover-tag-dark-red);
+    }
+
+    .small-button{
+        padding: 5px 19px;
+        display: flex;
+        align-items: center;
+    }
+
+    img{
+        width: 20px;
+    }
+
+    .all-buttons{
+        display: flex;
+        gap: 5rem;
     }
 </style>
