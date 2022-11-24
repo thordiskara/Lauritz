@@ -4,37 +4,41 @@ const deluxe = true
 const newitem = true
 import TagDeluxe from "./TagDeluxe.astro";
 import TagNew from "./TagNew.astro";
-import Eye from '../SVG/eye.svg';
+import Placeholder from '../img/placeholder.webp';
+import SecondaryBtnSmall from "../components/SecondaryBtnSmall.astro"
+import PrimaryBtnSmall from "../components/PrimaryBtnSmall.astro"
 ---
 
 <article>
-<img src="" alt="placeholder image">
-<div class="top">
-<div>
-    <p class="overline end">auction ends</p>
-    <h6>{productName}</h6>
-</div>
-<div class="tags">
-  {newitem &&  <TagNew />}
-  {deluxe && <TagDeluxe />}
-</div>
-</div>
-<div class="bottom">
-    <p class="overline">Lot number</p>
-    <div class="bids">
+    <img src={Placeholder} alt="image"/>
+<div class="text">
+    <div class="top">
     <div>
-        <p class="smallBody">Current Bid - (no.)</p> 
-        <p class="smallBody">DKK</p>
+        <p class="overline end">auction ends</p>
+        <h6>{productName}</h6>
     </div>
+    <div class="tags">
+      {newitem &&  <TagNew />}
+      {deluxe && <TagDeluxe />}
+    </div>
+    </div>
+    <div class="bottom">
+        <p class="overline">Lot number</p>
+        <div class="bids">
         <div>
-            <p class="smallBody">Estimate</p>
+            <p class="smallBody">Current Bid - (no.)</p> 
             <p class="smallBody">DKK</p>
         </div>
-    </div>
-    <p class="overline">Showroom: showroom</p>
-    <div class="buttons">
-        <a class="small-button overline" href="">View Item</a>
-        <button class="small-button overline">Watch Item <img src={Eye} alt="watch"/></button>
+            <div>
+                <p class="smallBody">Estimate</p>
+                <p class="smallBody">DKK</p>
+            </div>
+        </div>
+        <p class="overline">Showroom: showroom</p>
+        <div class="buttons">
+            <PrimaryBtnSmall />
+            <SecondaryBtnSmall />
+        </div>
     </div>
 </div>
 </article>
@@ -46,6 +50,11 @@ article{
     display: flex;
     flex-direction: column;
     width: 18.75rem;
+    gap: 0.7rem;
+}
+.text{
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
 }
 .top{
