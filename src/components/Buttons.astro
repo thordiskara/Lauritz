@@ -1,5 +1,8 @@
+---
+const icon = true;
+---
 <div>
-    <a href="">View Item</a>
+    <a href="">View Item </a>
     
     <button>Watch Item</button>
 </div>
@@ -11,8 +14,11 @@
         text-decoration: none;
         padding: 7px 30px;
         border-radius: 20px;
+        cursor: pointer;
     }
-
+    a:hover{
+        background-color: var(--hover-tag-dark-red);
+    }
     button{
         background-color: white;
         color: black;
@@ -20,5 +26,10 @@
         padding: 7px 30px;
         border-radius: 20px;
         border: solid black 1px;
+        cursor: pointer;
+    }
+    button:hover{
+        color:var(--hover-tag-dark-red);
+        border-color: var(--hover-tag-dark-red);
     }
 </style>

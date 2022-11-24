@@ -46,7 +46,11 @@
     --line-height-body: 1.188rem;
 
     /* Aliases */
-
+    --hover-tag-dark-red: var(--color-red-900);
+    --tag-light-pink: var(--color-red-100);
+    --auction-end-text: var(--color-red-800);
+    --divider-line-color: var(--color-gray-200);
+    --placeholder-text: var(--color-gray-400);
     }
 
 *{
