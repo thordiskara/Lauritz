@@ -1,0 +1,47 @@
+---
+import Placeholder from '../img/placeholder.webp';
+---
+
+<article>
+    <div class="carousel-img-container"><img src={Placeholder} alt="image"/></div>
+    <div class="carousel-layout">
+        <p class="overline timeLeft">Ends 13/1 at 13:45</p>
+        <p class="smallBody">Current bid - (9 bids)</p>
+    </div>
+    <div class="carousel-layout secondLine">
+        <h6>Colonial chair</h6>
+        <p class="bodyText">255 €</p>
+    </div>
+    
+</article>
+
+<style>
+    article{
+        max-width: 22rem;
+        height: auto;
+    }
+    .carousel-img-container{
+        max-width: 22rem;
+        padding-bottom: 0.5rem;
+    }
+    .carousel-img-container img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .carousel-layout{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.5rem;
+        line-height: var(--line-height-body);
+    }
+
+    .timeLeft{
+        color: var(--color-red-800);
+    }
+
+    .secondLine{
+        align-items: center;
+    }
+
+</style>

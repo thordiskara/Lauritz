@@ -3,13 +3,13 @@ const icon = true;
 import Eye from '../SVG/eye.svg';
 ---
 <div class="all-buttons">
-    <a class="buttonText" href="">View Item </a>
+    <a title="bigViewItem" class="buttonText" href="">View Item </a>
 
-    <button class="buttonText">Watch Item {icon && <img src={Eye} alt="watch"/>}</button>
+    <button title="bigWatchItem" class="buttonText">Watch Item {icon && <img src={Eye} alt="watch"/>}</button>
 
-    <a class="small-button overline" href="">View Item</a>
+    <a title="smallViewItem" class="small-button overline" href="">View Item</a>
     
-    <button class="small-button overline">Watch Item {icon && <img src={Eye} alt="watch"/>}</button>
+    <button title="smallWatchItem" class="small-button overline">Watch Item {icon && <img src={Eye} alt="watch"/>}</button>
 </div>
 
 <style>
