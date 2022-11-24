@@ -1,0 +1,114 @@
+---
+const productName = "Product Name"
+const deluxe = true
+const newitem = true
+import TagDeluxe from "./TagDeluxe.astro";
+import TagNew from "./TagNew.astro";
+import Eye from '../SVG/eye.svg';
+---
+
+<article>
+<img src="" alt="placeholder image">
+<div class="top">
+<div>
+    <p class="overline end">auction ends</p>
+    <h6>{productName}</h6>
+</div>
+<div class="tags">
+  {newitem &&  <TagNew />}
+  {deluxe && <TagDeluxe />}
+</div>
+</div>
+<div class="bottom">
+    <p class="overline">Lot number</p>
+    <div class="bids">
+    <div>
+        <p class="smallBody">Current Bid - (no.)</p> 
+        <p class="smallBody">DKK</p>
+    </div>
+        <div>
+            <p class="smallBody">Estimate</p>
+            <p class="smallBody">DKK</p>
+        </div>
+    </div>
+    <p class="overline">Showroom: showroom</p>
+    <div class="buttons">
+        <a class="small-button overline" href="">View Item</a>
+        <button class="small-button overline">Watch Item <img src={Eye} alt="watch"/></button>
+    </div>
+</div>
+</article>
+
+<style>
+
+article{
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 18.75rem;
+    gap: 3rem;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.end{
+    color: var(--auction-end-text);
+    padding-bottom: 1.2rem;
+}
+.bids{
+    display: flex;
+    justify-content: space-between;
+}
+.bids > div > p{
+    padding-top: 0.1rem;
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+a{
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        padding: 7px 30px;
+        border-radius: 20px;
+        cursor: pointer;
+    
+    }
+    a:hover{
+        background-color: var(--hover-tag-dark-red);
+    }
+    button{
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        padding: 7px 30px;
+        border-radius: 20px;
+        border: solid black 1px;
+        cursor: pointer;
+        display: flex;
+        gap: 0.3rem;
+        align-items: center;
+    }
+    button:hover{
+        color:var(--hover-tag-dark-red);
+        border-color: var(--hover-tag-dark-red);
+    }
+
+    .small-button{
+        padding: 5px 19px;
+        display: flex;
+        align-items: center;
+    }
+   .small-button > img{
+        width: 20px;
+    }
+
+</style>

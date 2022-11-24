@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro"
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import Buttons from "../components/Buttons.astro"
+import Gridcard from "../components/Gridcard.astro"
 ---
 
 <Layout>
@@ -39,6 +40,11 @@ import Buttons from "../components/Buttons.astro"
 
     <section class="light">
         <Buttons></Buttons>
+    </section>
+    
+    <section>
+        <h5>card</h5>
+        <Gridcard />
     </section>
     <Footer />
 </Layout>
