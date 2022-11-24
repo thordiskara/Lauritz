@@ -1,0 +1,93 @@
+---
+import Info from '../SVG/info.svg'
+---
+
+
+<section class="single-view-card">
+
+    <h5 class="auction-end">Auction ends</h5>
+    <div>
+       <div class="bodyText current-bid"> <p>Current bid - </p> <p>(no. Bids)</p></div> 
+        <h5>DKK</h5>
+    </div>
+    <div class="smallBody">
+        <p>estimate</p>
+        <p> DKK</p>
+    </div>
+    <div class="place-holder">
+        <p class="bodyText">DKK or up</p>
+    </div>
+    <div>
+    <img src={Info} alt="info icon">
+    <button class="small-button">Watch Item </button>
+    
+    <button class="small-button">Watch Item </button>
+</div>
+<div>
+    
+
+
+    <h5>DKK</h5>
+    <button class="small-button">BUY NOW</button>
+
+
+</div>
+<div>
+    <h5>shipping prices</h5>
+    <p class="bodyText">
+        To get a price on delivery to your home address or to a warehouse, please contact a transport company <span class="underline">here.</span> 
+
+
+    </p>
+    <p class="underline smallBody">
+        Change delivery address
+    </p>
+</div>
+<div>
+    <h5>previous bids</h5>
+    <div class="bodyText">
+        <p>name</p> <p>date</p> <p>DKK</p>
+    </div>
+    <div class="bodyText">
+        <p>name</p> <p>date</p> <p>DKK</p>
+    </div>
+    <p class="underline smallBody">Show more</p>
+
+
+</div>
+</section>
+
+<style>
+
+.single-view-card {
+        margin: 10px;
+        width:423px;
+        border: solid black 1px;
+        padding: 28px 32px 28px 32px;
+    
+    }
+    .auction-end {
+        color: var(--auction-end-text);
+    }
+   
+    .small-button{
+        padding: 5px 19px;
+        
+    }
+    .current-bid {
+        display: flex;
+    }
+    .place-holder {
+        color: var(--placeholder-text);
+        border-bottom: solid black 1px;
+    }
+    .underline {
+       text-decoration: underline;
+
+    }
+    .underline:hover {
+        color: var( --hover-tag-dark-red);
+        cursor: pointer;
+    }
+
+</style>
