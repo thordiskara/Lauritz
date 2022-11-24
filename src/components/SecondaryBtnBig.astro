@@ -1,0 +1,29 @@
+---
+const icon = true;
+import Eye from '../SVG/eye.svg';
+---
+
+<button title="bigWatchItem" class="buttonText">Watch Item {icon && <img src={Eye} alt="watch"/>}</button>
+
+<style>
+    button{
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        padding: 7px 30px;
+        border-radius: 20px;
+        border: solid black 1px;
+        cursor: pointer;
+        display: flex;
+        gap: 0.3rem;
+        align-items: center;
+    }
+    button:hover{
+        color:var(--hover-tag-dark-red);
+        border-color: var(--hover-tag-dark-red);
+    }
+
+    img{
+        width: 20px;
+    }
+</style>

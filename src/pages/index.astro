@@ -2,7 +2,10 @@
 import Layout from "../layouts/Layout.astro"
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
-import Buttons from "../components/Buttons.astro"
+import PrimaryBtnBig from "../components/PrimaryBtnBig.astro"
+import SecondaryBtnBig from "../components/SecondaryBtnBig.astro"
+import PrimaryBtnSmall from "../components/PrimaryBtnSmall.astro"
+import SecondaryBtnSmall from "../components/SecondaryBtnSmall.astro"
 import Carousel from "../components/Carousel.astro"
 ---
 
@@ -38,8 +41,19 @@ import Carousel from "../components/Carousel.astro"
         </div>
     </section>
 
-    <section class="light">
-        <Buttons></Buttons>
+    <section class="light buttonsLayout">
+        <div class="buttonsLayout">
+            <PrimaryBtnBig/>
+        </div>
+        <div class="buttonsLayout">
+            <SecondaryBtnBig/>
+        </div>
+        <div class="buttonsLayout">
+            <PrimaryBtnSmall/>
+        </div>
+        <div class="buttonsLayout">
+            <SecondaryBtnSmall/>
+        </div>
     </section>
 
     <section class="dark">
