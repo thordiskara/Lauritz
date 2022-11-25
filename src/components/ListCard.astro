@@ -1,0 +1,141 @@
+---
+const productName = "Product Name"
+const deluxe = true
+const newitem = true
+import TagDeluxe from "./TagDeluxe.astro";
+import TagNew from "./TagNew.astro";
+import Placeholder from '../img/placeholder.webp';
+import SecondaryBtnBig from "../components/SecondaryBtnBig.astro"
+import PrimaryBtnBig from "../components/PrimaryBtnBig.astro"
+---
+
+<article class="listlayout">
+    <div class="imgcontainer"><img src={Placeholder} alt="image"/></div>
+    <div class="info">
+        <div class="textlayout top">
+            <p class="overline end">auction ends</p>
+            <div class="tags">
+                {newitem &&  <TagNew />}
+                {deluxe && <TagDeluxe />}
+              </div>
+        </div>
+        <div class="textlayout">
+            <div>
+                <h6>{productName}</h6>
+                <p class="bodyText">Description</p>
+            </div>
+            <div class="bids ">
+                <div class="top">
+                    <p class="smallBody">Current Bid - (no.)</p> 
+                    <p class="smallBody">DKK</p>
+                </div>
+                <div class="top">
+                    <p class="smallBody">Estimate</p>
+                    <p class="smallBody">DKK</p>
+                </div>
+                <div class="top">
+                    <p class="smallBody">Buy Now</p>
+                    <p class="smallBody">DKK</p>
+                </div>
+            </div>
+        </div>
+        <div class="textlayout top">
+            <p class="overline">Lot number</p>
+            <p class="overline">Showroom: showroom</p>
+        </div>
+        <div class="buttons doubletop">
+            <PrimaryBtnBig />
+            <SecondaryBtnBig />
+        </div>
+    </div>
+</article>
+
+<style>
+
+.listlayout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 48rem;
+    height: 20rem;
+    gap: 0.7rem;
+}
+.textlayout{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.top{
+    padding-top: 1rem;
+}
+.end{
+    color: var(--auction-end-text);
+    padding-bottom: 1.2rem;
+}
+.bids{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bids > div > p{
+    padding-top: 0.1rem;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        padding: 7px 30px;
+        border-radius: 20px;
+        cursor: pointer;
+    
+    }
+    a:hover{
+        background-color: var(--hover-tag-dark-red);
+    }
+    button{
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        padding: 7px 30px;
+        border-radius: 20px;
+        border: solid black 1px;
+        cursor: pointer;
+        display: flex;
+        gap: 0.3rem;
+        align-items: center;
+    }
+    button:hover{
+        color:var(--hover-tag-dark-red);
+        border-color: var(--hover-tag-dark-red);
+    }
+
+    .small-button{
+        padding: 5px 19px;
+        display: flex;
+        align-items: center;
+    }
+   .small-button > img{
+        width: 20px;
+    }
+
+    .imgcontainer{
+        height: 100%;
+    }
+
+    .imgcontainer img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .doubletop{
+        padding-top: 2rem;
+    }
+
+</style>

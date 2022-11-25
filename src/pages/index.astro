@@ -9,6 +9,7 @@ import SecondaryBtnSmall from "../components/SecondaryBtnSmall.astro"
 import Carousel from "../components/Carousel.astro"
 import Gridcard from "../components/Gridcard.astro"
 import Singlecard  from "../components/Singlecard.astro"
+import ListCard  from "../components/ListCard.astro"
 ---
 
 <Layout>
@@ -63,8 +64,10 @@ import Singlecard  from "../components/Singlecard.astro"
     </section>
     
     <section class="light">
-        <h5>card</h5>
-        <Gridcard />
+        <div class="cardslayout">
+            <Gridcard />
+            <ListCard />
+        </div>
     </section>
 <section class="dark">
     <Singlecard/>
@@ -78,4 +81,9 @@ import Singlecard  from "../components/Singlecard.astro"
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+
+    .cardslayout{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    }
 </style>
